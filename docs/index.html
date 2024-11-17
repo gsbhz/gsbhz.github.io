@@ -93,8 +93,9 @@
         skipLink: {
           '/zh-cn/': '跳到主要内容',
         },
-        /*plugins: [
-          DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
+        plugins: [
+            EditOnGithubPlugin.create(docBase, docEditBase, title)
+          /*DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
           // Plugin: Footer
           function (hook, vm) {
             hook.beforeEach(html => {
@@ -122,8 +123,8 @@
 
               return html + footerHTML;
             });
-          },
-        ],*/
+          },*/
+        ],
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
@@ -139,6 +140,7 @@
     <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
     
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
