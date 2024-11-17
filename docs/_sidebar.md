@@ -2,6 +2,6 @@
 
 - windows
 
-  - [WSL](windows/wsl.md "WSL ¿ªÆô¼°ÅäÖÃ")
-  - [ffmpeg](windows/ffmpeg.md "py+ffmpegµÄÊ¹ÓÃ·½·¨")
+  - [WSL](windows/wsl.md "WSL å¼€å¯åŠé…ç½®")
+  - [ffmpeg](windows/ffmpeg.md "py+ffmpegçš„ä½¿ç”¨æ–¹æ³•")
 
