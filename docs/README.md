@@ -1,3 +1,3 @@
-# ѧϰ�ʼ�
+# 学习笔记
 
-Check out the [�ĵ�](https://docsify.js.org/#/zh-cn/) to see docsify in use.
+Check out the [文档](https://docsify.js.org/#/zh-cn/) to see docsify in use.
