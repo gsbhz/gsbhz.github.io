@@ -31,9 +31,52 @@
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css"
     />
 
+    <!-- Theme Add-on(s) -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css"
+      media="(prefers-color-scheme: dark)"
+      data-group="addon"
+      data-sheet="core-dark-auto"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/pure.css"
+      data-group="addon"
+      data-sheet="core-dark"
+      disabled
+    />
+
     <!-- Site styles -->
     <style>
-      
+      /* Plugin: Carbon Ads */
+      #carbonads > :last-child {
+        margin-block: calc((1em * var(--line-height)) / 2);
+      }
+
+      /* UI Kit */
+      .ui-kit-color {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: var(--font-size-s);
+      }
+
+      .ui-kit-color figure {
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ui-kit-color figure div {
+        height: 4rem;
+        border-radius: var(--border-radius);
+      }
+
+      .ui-kit-color figcaption {
+        text-align: center;
+        padding: 0.5em 0;
+      }
     </style>
     <script>
       // Set html "lang" attribute based on URL
@@ -49,75 +92,73 @@
 
   <body class="loading sidebar-chevron-right sidebar-group-box">
     <div id="app"></div>
+    <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1"></script>
     <script>
       // Docsify configuration
       window.$docsify = {
-        name: '学习笔记',
-        nameLink: {
-          '/zh-cn/': '#/zh-cn/',
-          '/': '#/',
-        },
-        repo: '', // GitHub 仓库地址，页面右上角会渲染一个 GitHub 角标。
         alias: {
-          '/.*/_sidebar.md': '/_sidebar.md'
+          '.*?/awesome':
+            'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
+          '.*?/changelog':
+            'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
+          '/.*/_navbar.md': '/_navbar.md',
+          '/es/(.*)':
+            'https://raw.githubusercontent.com/docsifyjs/docs-es/master/$1',
+          '/de-de/(.*)':
+            'https://raw.githubusercontent.com/docsifyjs/docs-de/master/$1',
+          '/ru-ru/(.*)':
+            'https://raw.githubusercontent.com/docsifyjs/docs-ru/master/$1',
+          '/zh-cn/(.*)':
+            'https://cdn.jsdelivr.net/gh/docsifyjs/docs-zh@master/$1',
         },
-        auto2top: true, // 切换页面后是否自动跳转到页面顶部
-        coverpage: false, // 设置是否启用封面页，默认不启用。若开启，加载的是项目根目录下的 _coverpage.md 文件
+        auto2top: true,
+        coverpage: true,
         executeScript: true,
         // hideSidebar: true,
-        loadNavbar: true,
-        // mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
-        // routerMode: 'history', // 路由模式。默认为 ‘hash’。如果设置为 history 之后，浏览器链接里不会出现 #，可能会对 SEO 更友好。
         loadSidebar: true,
-        // 配合 loadSidebar，实现自定义侧边栏的二级目录 
-        maxLevel: 4, // 最大支持渲染的标题层级
-        subMaxLevel: 2, // 自定义侧边栏后，默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）。
+        loadNavbar: true,
+        // mergeNavbar: true,
+        maxLevel: 4,
+        // repo: 'docsifyjs/docsify',
+        // routerMode: 'history',
+        subMaxLevel: 2,
         gtag: 'G-H77Y58DS3L',
         matomo: {
           host: '//matomo.thunderwave.de',
           id: 6,
         },
+        name: 'docsify',
+        nameLink: {
+          '/es/': '#/es/',
+          '/de-de/': '#/de-de/',
+          '/ru-ru/': '#/ru-ru/',
+          '/zh-cn/': '#/zh-cn/',
+          '/': '#/',
+        },
         search: {
-          /* 
-          开启全局搜索需要引入两个 js 文件：
-          "//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"
-          "//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"
-          */
           // insertAfter: '.app-name',
           // insertBefore: '.sidebar-nav',
           noData: {
+            '/es/': '¡No hay resultados!',
+            '/de-de/': 'Keine Ergebnisse!',
+            '/ru-ru/': 'Никаких результатов!',
             '/zh-cn/': '没有结果!',
             '/': 'No results!',
           },
           paths: 'auto',
-          depth: 6, // 搜索标题的最大层级, 1 - 6
           placeholder: {
+            '/es/': 'Buscar',
+            '/de-de/': 'Suche',
+            '/ru-ru/': 'Поиск',
             '/zh-cn/': '搜索',
             '/': 'Search',
           },
-          namespace: 'zh-cn',
-          pathNamespaces: ['/zh-cn'],
-          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-          hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
-        },
-        count: {
-            // 字数统计
-            countable: true,
-            fontsize: '0.9em',
-            color: 'rgb(90,90,90)',
-            language: 'chinese'
-        },
-        pagination: {
-          /*
-          "//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"
-          "//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"
-          */
-          previousText: '上一章节',
-          nextText: '下一章节',
-          crossChapter: true,
-          crossChapterText: false,
+          pathNamespaces: ['/es', '/de-de', '/ru-ru', '/zh-cn'],
         },
         skipLink: {
+          '/es/': 'Saltar al contenido principal',
+          '/de-de/': 'Ga naar de hoofdinhoud',
+          '/ru-ru/': 'Перейти к основному содержанию',
           '/zh-cn/': '跳到主要内容',
         },
         vueComponents: {
@@ -210,13 +251,6 @@
     <!-- <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/front-matter.min.js"></script>
     <script src="/static/plugins/gtag.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/matomo.min.js"></script> -->
-    
-    <!-- emoji表情支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-    <!-- 图片放大缩小支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
     
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
