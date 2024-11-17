@@ -2,54 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>docsify</title>
+    <title>学习笔记</title>
     <link rel="icon" href="_media/favicon.ico" />
-    <meta
-      name="google-site-verification"
-      content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE"
-    />
-    <meta
-      name="keywords"
-      content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages"
-    />
+    <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages" />
     <meta name="description" content="A magical documentation generator." />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
-      data-group="addon"
-      data-sheet="vue"
-    />
-    <!-- Core Theme
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css"
-    /> -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
     <!-- Site styles -->
     <style>
       
     </style>
     <script>
       // Set html "lang" attribute based on URL
-      (function () {
+      /*(function () {
         const lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);
 
         if (lang) {
           document.documentElement.setAttribute('lang', lang[1]);
         }
-      })();
+      })();*/
     </script>
   </head>
 
-  <body class="loading sidebar-chevron-right sidebar-group-box">
-    <div id="app"></div>
+  <body>
+    <div id="app">Loading...</div>
     <script>
-      // Docsify configuration
       window.$docsify = {
         name: '学习笔记',
         nameLink: {
@@ -63,19 +40,19 @@
         auto2top: true, // 切换页面后是否自动跳转到页面顶部
         coverpage: false, // 设置是否启用封面页，默认不启用。若开启，加载的是项目根目录下的 _coverpage.md 文件
         executeScript: true,
-        // hideSidebar: true,
         loadNavbar: true,
         // mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
         // routerMode: 'history', // 路由模式。默认为 ‘hash’。如果设置为 history 之后，浏览器链接里不会出现 #，可能会对 SEO 更友好。
         loadSidebar: true,
+        // hideSidebar: true,
         // 配合 loadSidebar，实现自定义侧边栏的二级目录 
         maxLevel: 4, // 最大支持渲染的标题层级
         subMaxLevel: 2, // 自定义侧边栏后，默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）。
         gtag: 'G-H77Y58DS3L',
-        matomo: {
-          host: '//matomo.thunderwave.de',
-          id: 6,
-        },
+        //matomo: {
+        //  host: '//matomo.thunderwave.de',
+        //  id: 6,
+        //},
         search: {
           /* 
           开启全局搜索需要引入两个 js 文件：
@@ -99,18 +76,14 @@
           maxAge: 86400000, // 过期时间，单位毫秒，默认一天
           hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
         },
-        count: {
+        /*count: {
             // 字数统计
             countable: true,
             fontsize: '0.9em',
             color: 'rgb(90,90,90)',
             language: 'chinese'
-        },
+        },*/
         pagination: {
-          /*
-          "//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"
-          "//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"
-          */
           previousText: '上一章节',
           nextText: '下一章节',
           crossChapter: true,
@@ -119,89 +92,7 @@
         skipLink: {
           '/zh-cn/': '跳到主要内容',
         },
-        vueComponents: {
-          'button-counter': {
-            template: /* html */ `<button @click="count += 1">You clicked me {{ count }} times</button>`,
-            data() {
-              return {
-                count: 0,
-              };
-            },
-          },
-        },
-        vueGlobalOptions: {
-          data() {
-            return {
-              count: 0,
-              message: 'Hello, World!',
-              // Fake API response
-              images: [
-                { title: 'Image 1', url: 'https://picsum.photos/150?random=1' },
-                { title: 'Image 2', url: 'https://picsum.photos/150?random=2' },
-                { title: 'Image 3', url: 'https://picsum.photos/150?random=3' },
-              ],
-            };
-          },
-          computed: {
-            timeOfDay() {
-              const date = new Date();
-              const hours = date.getHours();
-
-              if (hours < 12) {
-                return 'morning';
-              } else if (hours < 18) {
-                return 'afternoon';
-              } else {
-                return 'evening';
-              }
-            },
-          },
-          methods: {
-            hello() {
-              alert(this.message);
-            },
-          },
-        },
-        vueMounts: {
-          '#counter': {
-            data() {
-              return {
-                count: 0,
-              };
-            },
-          },
-        },
-        plugins: [
-          DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
-          // Plugin: Footer
-          function (hook, vm) {
-            hook.beforeEach(html => {
-              if (/githubusercontent\.com/.test(vm.route.file)) {
-                url = vm.route.file
-                  .replace('raw.githubusercontent.com', 'github.com')
-                  .replace(/\/master/, '/blob/master');
-              } else if (/jsdelivr\.net/.test(vm.route.file)) {
-                url = vm.route.file
-                  .replace('cdn.jsdelivr.net/gh', 'github.com')
-                  .replace('@master', '/blob/master');
-              } else {
-                url =
-                  'https://github.com/docsifyjs/docsify/blob/develop/docs/' +
-                  vm.route.file;
-              }
-
-              const footerHTML = [
-                '<hr>',
-                '<div style="display: flex; align-items: center; justify-content: space-between;">',
-                '  <span>Powered by <a href="/">Docsify.js</a></span>',
-                `  <a href="${url}" style="display: inline-flex; align-items: center; gap: 0.25em;">:memo: Edit Page</a>`,
-                '</div>',
-              ].join('\n');
-
-              return html + footerHTML;
-            });
-          },
-        ],
+        
       };
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
@@ -216,6 +107,7 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
     <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
     
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
