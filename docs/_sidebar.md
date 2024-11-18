@@ -4,7 +4,7 @@
 
   - [WSL](windows/wsl.md "WSL 开启及配置")
   - [win10激活](windows/win10激活.md)
-  - [Win10 加上右键菜单文件哈希校验功能](windows/Win10 加上右键菜单文件哈希校验功能.md)
+  - [Win10 加上右键菜单文件哈希校验功能]("windows/Win10 加上右键菜单文件哈希校验功能.md")
   - [win10自启动目录](windows/win10自启动目录.md)
   - [常用批处理](windows/常用批处理.md)
   - [局域网远程关机](windows/局域网远程关机.md)
@@ -17,17 +17,17 @@
 
   - [Asus路由器]("服务器/Docker 中配置 Nginx.md")
   - [IIS 反向代理]("服务器/IIS 反向代理.md")
-  - [Keepalived]("服务器/Keepalived.md")
+  - [Keepalived](服务器/Keepalived.md)
   
 - docker
 
-  - [mysql]("docker/mysql.md")
+  - [mysql](docker/mysql.md)
 
 - Python
 
   - [Windows下用venv创建虚拟环境](python/Windows下用venv创建虚拟环境.md)
-  - [ffmpeg](python/ffmpeg.md "py+ffmpeg的使用方法")
   - [conda使用方法](python/conda使用方法.md)
+  - [ffmpeg](python/ffmpeg.md "py+ffmpeg的使用方法")
 
 - Javascript
 
