@@ -1,0 +1,20 @@
+/* declare variables */
+DECLARE 
+	@id INT
+
+DECLARE cur CURSOR LOCAL FAST_FORWARD READ_ONLY FOR 
+    SELECT id FROM $table_name$ ORDER BY id DESC
+OPEN cur
+
+FETCH NEXT FROM cur INTO @id
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    $CURSOR$
+
+    -- cur_next:
+    FETCH NEXT FROM cur INTO @id
+END
+
+CLOSE cur
+DEALLOCATE cur
