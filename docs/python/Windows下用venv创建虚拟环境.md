@@ -1,29 +1,29 @@
-## 1.´´½¨Ò»¸öĞéÄâ»·¾³
+## 1.åˆ›å»ºä¸€ä¸ªè™šæ‹Ÿç¯å¢ƒ
 ``` bash
 D:\>mkdir my_venv
 D:\>cd my_venv
 D:\my_venv>python -m venv venv1
 ```
 
-ÃüÁîpython -m venv venv1,´´½¨Ò»¸övenv1µÄĞéÄâ»·¾³£¬Éú³ÉÄ¿Â¼ĞÎÊ½ÈçÏÂ£º
+å‘½ä»¤python -m venv venv1,åˆ›å»ºä¸€ä¸ªvenv1çš„è™šæ‹Ÿç¯å¢ƒï¼Œç”Ÿæˆç›®å½•å½¢å¼å¦‚ä¸‹ï¼š
 
 ```
 venv1
-  ©¦  pyvenv.cfg
-  ©¦  
-  ©À©¤Include
-  ©À©¤Lib
-  ©¸©¤Scripts
+  â”‚  pyvenv.cfg
+  â”‚  
+  â”œâ”€Include
+  â”œâ”€Lib
+  â””â”€Scripts
 ```
 
-## 2.ÆôÓÃĞéÄâ»·¾³
+## 2.å¯ç”¨è™šæ‹Ÿç¯å¢ƒ
 ``` bash
 D:\my_venv>venv1\Scripts\activate.bat
 (venv1) D:\my_venv
 ```
 
-## 3.pipÔÚĞéÄâ»·¾³°²×°Ä£¿é
-Ê×ÏÈ²é¿´Ä¿Ç°ĞéÄâ»·¾³ÒÑÓĞµÄÄ£¿é£º
+## 3.pipåœ¨è™šæ‹Ÿç¯å¢ƒå®‰è£…æ¨¡å—
+é¦–å…ˆæŸ¥çœ‹ç›®å‰è™šæ‹Ÿç¯å¢ƒå·²æœ‰çš„æ¨¡å—ï¼š
 ``` bash
 (venv1) D:\my_venv>pip list
 pip (8.1.1)
@@ -32,9 +32,9 @@ You are using pip version 8.1.1, however version 8.1.2 is available.
 You should consider upgrading via the 'python -m pip install --upgrade pip' command.
 ```
 
-ÌáÊ¾pipÓĞĞÂ°æ±¾£¬°´ÌáÊ¾python -m pip install --upgrade pip ÃüÁî¸üĞÂ¾ÍºÃ£¬Ç§Íò±ğÓÃpip install --upgrade pip£¬ÕâÑù»áÆÆ»µpip
+æç¤ºpipæœ‰æ–°ç‰ˆæœ¬ï¼ŒæŒ‰æç¤ºpython -m pip install --upgrade pip å‘½ä»¤æ›´æ–°å°±å¥½ï¼Œåƒä¸‡åˆ«ç”¨pip install --upgrade pipï¼Œè¿™æ ·ä¼šç ´åpip
 
-## 4.ÍË³öĞéÄâ»·¾³
+## 4.é€€å‡ºè™šæ‹Ÿç¯å¢ƒ
 
 ``` bash
 (venv1) D:\my_venv>test\Scripts\deactivate.bat

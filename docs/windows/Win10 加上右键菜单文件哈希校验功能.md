@@ -1,10 +1,10 @@
-**Win10 加上右键菜单文件哈希校验功能**
-把以下代码保存为文件 `校验文件hash.reg`
+**Win10 鍔犱笂鍙抽敭鑿滃崟鏂囦欢鍝堝笇鏍￠獙鍔熻兘**
+鎶婁互涓嬩唬鐮佷繚瀛樹负鏂囦欢 `鏍￠獙鏂囦欢hash.reg`
 ``` bash
 Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\hash]
-"MUIVerb"="校验文件 Hash"
+"MUIVerb"="鏍￠獙鏂囦欢 Hash"
 "SubCommands"=""
 "Icon"="PowerShell.exe"
 
@@ -60,14 +60,14 @@ Windows Registry Editor Version 5.00
 ; Allget-filehash -literalpath '%1' -algorithm RIPEMD160 | format-list
 [HKEY_CLASSES_ROOT\*\shell\hash\shell\08menu]
 "CommandFlags"=dword:00000020
-"MUIVerb"="校验全部"
+"MUIVerb"="鏍￠獙鍏ㄩ儴"
 
 [HKEY_CLASSES_ROOT\*\shell\hash\shell\08menu\command]
 @="powershell -noexit get-filehash -literalpath '%1' -algorithm SHA1 | format-list;get-filehash -literalpath '%1' -algorithm SHA256 | format-list;get-filehash -literalpath '%1' -algorithm SHA384 | format-list;get-filehash -literalpath '%1' -algorithm SHA512 | format-list;get-filehash -literalpath '%1' -algorithm MACTripleDES | format-list;get-filehash -literalpath '%1' -algorithm MD5 | format-list;get-filehash -literalpath '%1' -algorithm RIPEMD160 | format-list"
 ```
 
-**卸载-检验文件hash**
-把以下代码保存为文件 `卸载-检验文件hash.reg`
+**鍗歌浇-妫�楠屾枃浠秇ash**
+鎶婁互涓嬩唬鐮佷繚瀛樹负鏂囦欢 `鍗歌浇-妫�楠屾枃浠秇ash.reg`
 ``` bash
 Windows Registry Editor Version 5.00
 
