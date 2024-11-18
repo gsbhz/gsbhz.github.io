@@ -35,8 +35,8 @@
   
 - C#
 
-  - [C# .net 代码混淆、加壳](csharp/C#代码混淆、加壳.md)
-  - [C# 用命令编译解决方案和项目](csharp/C#用命令编译解决方案和项目.md)
+  - [C# .net 代码混淆、加壳](csharp/CSharp代码混淆+加壳.md)
+  - [C# 用命令编译解决方案和项目](csharp/CSharp用命令编译解决方案和项目.md)
   
 - Database
 
