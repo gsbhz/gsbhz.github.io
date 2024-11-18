@@ -2,7 +2,7 @@
 
   - [WSL](windows/wsl.md "WSL 开启及配置")
   - [win10激活](windows/win10激活.md)
-  - [Win10 加上右键菜单文件哈希校验功能](windows/Win10加上右键菜单文件哈希校验功能.md)
+  - [Win10 加上右键菜单文件哈希校验功能](windows/win10加上右键菜单文件哈希校验功能.md)
   - [win10自启动目录](windows/win10自启动目录.md)
   - [常用批处理](windows/常用批处理.md)
   - [局域网远程关机](windows/局域网远程关机.md)
