@@ -43,3 +43,7 @@
   - mysql
   
     - [Mariadb 主从复制](db/mysql/Mariadb主从复制.md)
+
+- 投资理财类
+
+    - [冲刺白马股](投资理财/冲刺白马股.md)
