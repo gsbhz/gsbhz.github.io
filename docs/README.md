@@ -51,12 +51,10 @@ Check out the [文档](https://docsify.js.org/#/zh-cn/) to see docsify in use.
   
 <details>
     <summary>Database</summary>
-    <li>
-        <details>
-            <summary>mysql</summary>
-            <li><a href="db/mysql/Mariadb主从复制.md" target="_blank">Mariadb 主从复制</a></li>
-        </details>
-    </li>
+    <details>
+        <summary>mysql</summary>
+        <li><a href="db/mysql/Mariadb主从复制.md" target="_blank">Mariadb 主从复制</a></li>
+    </details>
 </details>
 
 <details>
