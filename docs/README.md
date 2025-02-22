@@ -2,11 +2,6 @@
 
 Check out the [文档](https://docsify.js.org/#/zh-cn/) to see docsify in use.
 
-<style type="text/css">
-    details summary {margin-bottom:10px;}
-    details li {margin-left:20px;}
-</style>
-
 <details>
     <summary>windows</summary>
     <li><a href="windows/wsl.md" title="WSL 开启及配置" target="_blank">WSL</a></li>
