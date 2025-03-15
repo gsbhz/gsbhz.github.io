@@ -9,7 +9,7 @@ Check out the [文档](https://docsify.js.org/#/zh-cn/) to see docsify in use.
     <li><a href="#/windows/win10加上右键菜单文件哈希校验功能.md">Win10 加上右键菜单文件哈希校验功能</a></li>
     <li><a href="#/windows/win10自启动目录.md">win10自启动目录</a></li>
     <li><a href="#/windows/常用批处理.md">常用批处理</a></li>
-    <li><a href="#/windows/局域网远程关机.md">局域网远程关机</a></li>
+    <li><a href="#/windows/远程桌面连接.md">远程桌面连接相关问题</a></li>
 </details>
 
 <details>

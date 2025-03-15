@@ -5,7 +5,7 @@
   - [Win10 加上右键菜单文件哈希校验功能](windows/win10加上右键菜单文件哈希校验功能.md)
   - [win10自启动目录](windows/win10自启动目录.md)
   - [常用批处理](windows/常用批处理.md)
-  - [局域网远程关机](windows/局域网远程关机.md)
+  - [远程桌面连接相关问题](windows/远程桌面连接.md)
 
 - linux
 
