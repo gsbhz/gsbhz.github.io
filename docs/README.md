@@ -61,6 +61,8 @@ Check out the [文档](https://docsify.js.org/#/zh-cn/) to see docsify in use.
     <summary>投资理财类</summary>
     <li><a href="#/投资理财/冲刺白马股.md">冲刺白马股</a></li>
     <li><a href="#/投资理财/怎样选择成长股.md">怎样选择成长股【小休伊特·海瑟曼】</a></li>
+    <li><a href="#/投资理财/Serenity的瓶颈投资方法论解析.md">Serenity的瓶颈投资方法论解析</a></li>
+    <li><a href="#/投资理财/Serenity投资案例拆解.md">Serenity投资案例拆解</a></li>
 </details>
 
 
